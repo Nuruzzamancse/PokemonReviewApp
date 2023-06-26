@@ -2,6 +2,8 @@
 using PokemonReviewApp;
 using PokemonReviewApp.Data;
 using PokemonReviewApp.Models;
+using PokemonReviewApp.Interfaces;
+using PokemonReviewApp.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,7 @@ builder.Services.AddTransient<Seed>();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PokemonCS")));
 builder.Services.AddControllers();
+builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -21,10 +21,14 @@
     <None Remove="Controllers\" />
     <None Remove="Models\" />
     <None Remove="Data\" />
+    <None Remove="Repository\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="Data\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>
